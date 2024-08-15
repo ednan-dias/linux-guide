@@ -16,7 +16,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - A opção `-r` (ou `--recursive`) permite que o cp copie recursivamente todo o conteúdo da pasta, incluindo subdiretórios e arquivos.
 
-  - - -
+- - -
 
 ### rsync
 
@@ -39,7 +39,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - `-P`: Uma forma abreviada que combina `--progress` e `--partial`. O `--partial` preserva arquivos parcialmente transferidos caso a transferência seja interrompida, permitindo retomar do ponto em que parou.
 
-  - - -
+- - -
 
     rsync -av --info=progress2 /caminho/origem /caminho/destino
 
