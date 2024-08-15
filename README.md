@@ -1,4 +1,4 @@
-# Guia Linux :book:
+# Guia Linux :penguin:
 
 - Neste Guia, vou apresentar soluções para as dúvidas mais comuns de um ambiente Linux, vou dar preferência a mostrar as soluções pelo terminal, para que você fique mais familiarizado com os comandos do mundo Unix.
 
@@ -20,7 +20,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 ### rsync
 
-    rsync -av /caminho/origem /caminho/destino
+```rsync -av /caminho/origem /caminho/destino```
 
 - `-a` (ou `--archive`): Essa é uma das opções mais poderosas. Ela ativa um modo "recursivo" que preserva as seguintes propriedades durante a cópia:
 
@@ -29,7 +29,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
   - Preservação de permissões (-p)
   - Preservação de timestamps (-t)
   - Preservação de grupos (-g)
-  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D) <br/>
+  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)
 
   > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
 
