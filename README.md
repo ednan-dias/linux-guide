@@ -1,19 +1,38 @@
 # Guia Linux :book:
 
-- Neste guia, você vai aprender a usar as principais funcionalidades de um sistema Linux, vou apresentar as dúvidas divididas por tópicos, e como solucioná-las, não importa que seja pela interface gráfica ou pelo terminal.
+- Neste Guia, vou apresentar soluções para as dúvidas mais comuns de um ambiente Linux, vou dar preferência a mostrar as soluções pelo terminal, para que você fique mais familiarizado com os comandos do mundo Unix.
 
 ## Sumário
 
-[Instalação de Programas](#instalacao-de-programas)
+[Transferência de Arquivos](#transferencia-de-arquivos)
 
-## Instalação de Programas
+## Transferência de Arquivos :recycle:
 
-- ### Como instalar um programa zipado? (Manualmente)
+- ### Existem dois principais modos de transferir arquivos no Linux, com os comandos `cp` e `rsync`:
 
-  Ao baixar um arquivo zipado `.tar.gz`, você deve deixá-lo com um "comportamento padrão" de um programa sozinho, colocando ele em alguma pasta na raiz **/** e criando um atalho para que ele possa ser acessado.
+  - `cp -r /caminho/origem /caminho/destino`
 
-  1. Descompacte-o usando: `tar -xvf "nome do arquivo".tar.gz`
+    - A opção `-r` (ou `--recursive`) permite que o cp copie recursivamente todo o conteúdo da pasta, incluindo subdiretórios e arquivos.
 
-  2. Mova-o para uma pasta de sua escolha, recomendo a pasta **/opt** que fica na raiz do sistema, pois é a pasta padrão usada pela maioria dos programas instalados de forma automática: `sudo mv "nome da pasta/" /opt/`
+  - `rsync -av /caminho/origem /caminho/destino`
 
-## Redes :earth_americas:
+    `-a` (ou `--archive`): Essa é uma das opções mais poderosas. Ela ativa um modo "recursivo" que preserva as seguintes propriedades durante a cópia:
+
+    - Recursividade (-r)
+    - Preservação de links simbólicos (-l)
+    - Preservação de permissões (-p)
+    - Preservação de timestamps (-t)
+    - Preservação de grupos (-g)
+    - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)
+
+    Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
+
+    `-v` (ou `--verbose`): Habilita a "verbosidade", ou seja, faz com que o rsync mostre informações detalhadas sobre os arquivos que estão sendo copiados. Isso é útil para acompanhar o progresso e ver o que está sendo transferido.
+
+    `-P`: Uma forma abreviada que combina `--progress` e `--partial`. O `--partial` preserva arquivos parcialmente transferidos caso a transferência seja interrompida, permitindo retomar do ponto em que parou.
+
+    `rsync -avP /caminho/origem /caminho/destino`
+
+    `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
+
+    `rsync -av --info=progress2 /caminho/origem /caminho/destino`
