@@ -12,9 +12,9 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 ### cp
 
-    - `cp -r /caminho/origem /caminho/destino`
+     - `cp -r /caminho/origem /caminho/destino`
 
-    - A opção `-r` (ou `--recursive`) permite que o cp copie recursivamente todo o conteúdo da pasta, incluindo subdiretórios e arquivos.
+- A opção `-r` (ou `--recursive`) permite que o cp copie recursivamente todo o conteúdo da pasta, incluindo subdiretórios e arquivos.
 
   - - -
 
