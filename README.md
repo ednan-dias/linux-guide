@@ -12,33 +12,35 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 ### cp
 
-     - `cp -r /caminho/origem /caminho/destino`
+    cp -r /caminho/origem /caminho/destino
 
 - A opção `-r` (ou `--recursive`) permite que o cp copie recursivamente todo o conteúdo da pasta, incluindo subdiretórios e arquivos.
 
   - - -
 
-- `rsync -av /caminho/origem /caminho/destino`
+### rsync
 
-  - `-a` (ou `--archive`): Essa é uma das opções mais poderosas. Ela ativa um modo "recursivo" que preserva as seguintes propriedades durante a cópia:
+    rsync -av /caminho/origem /caminho/destino
 
-    - Recursividade (-r)
-    - Preservação de links simbólicos (-l)
-    - Preservação de permissões (-p)
-    - Preservação de timestamps (-t)
-    - Preservação de grupos (-g)
-    - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)
+- `-a` (ou `--archive`): Essa é uma das opções mais poderosas. Ela ativa um modo "recursivo" que preserva as seguintes propriedades durante a cópia:
 
-        > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
+  - Recursividade (-r)
+  - Preservação de links simbólicos (-l)
+  - Preservação de permissões (-p)
+  - Preservação de timestamps (-t)
+  - Preservação de grupos (-g)
+  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)
 
-  - `-v` (ou `--verbose`): Habilita a "verbosidade", ou seja, faz com que o rsync mostre informações detalhadas sobre os arquivos que estão sendo copiados. Isso é útil para acompanhar o progresso e ver o que está sendo transferido.
+  > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
 
-- `rsync -avP /caminho/origem /caminho/destino`
+- `-v` (ou `--verbose`): Habilita a "verbosidade", ou seja, faz com que o rsync mostre informações detalhadas sobre os arquivos que estão sendo copiados. Isso é útil para acompanhar o progresso e ver o que está sendo transferido.
 
-  - `-P`: Uma forma abreviada que combina `--progress` e `--partial`. O `--partial` preserva arquivos parcialmente transferidos caso a transferência seja interrompida, permitindo retomar do ponto em que parou.
+    rsync -avP /caminho/origem /caminho/destino
 
-    - - -
+- `-P`: Uma forma abreviada que combina `--progress` e `--partial`. O `--partial` preserva arquivos parcialmente transferidos caso a transferência seja interrompida, permitindo retomar do ponto em que parou.
 
-- `rsync -av --info=progress2 /caminho/origem /caminho/destino`  
+  - - -
 
-  - `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
+    rsync -av --info=progress2 /caminho/origem /caminho/destino
+
+- `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
