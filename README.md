@@ -24,17 +24,17 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - `-a` (ou `--archive`): Essa é uma das opções mais poderosas. Ela ativa um modo "recursivo" que preserva as seguintes propriedades durante a cópia:
 
-  - Recursividade (-r)
+  1. Recursividade (-r)
 
-  - Preservação de links simbólicos (-l)
+  2. Preservação de links simbólicos (-l)
 
-  - Preservação de permissões (-p)
+  3. Preservação de permissões (-p)
 
-  - Preservação de timestamps (-t)
+  4. Preservação de timestamps (-t)
 
-  - Preservação de grupos (-g)
-  
-  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)  
+  5. Preservação de grupos (-g)
+
+  6. Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)  
   
   > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
 
