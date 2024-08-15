@@ -44,3 +44,5 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
     rsync -av --info=progress2 /caminho/origem /caminho/destino
 
 - `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
+
+## Firewall :recycle:
