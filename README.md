@@ -1,16 +1,16 @@
 # Guia Linux :penguin:
 
-- Neste Guia, vou apresentar soluções para as dúvidas mais comuns de um ambiente Linux, vou dar preferência a mostrar as soluções pelo terminal, para que você fique mais familiarizado com os comandos do mundo Unix.
+Neste Guia, vou apresentar soluções para as dúvidas mais comuns de um ambiente Linux, vou dar preferência a mostrar as soluções pelo terminal, para que você fique mais familiarizado com os comandos do mundo Unix.
 
-## Sumário
+# Sumário
 
 [Transferência de Arquivos](#transferencia-de-arquivos)
 
-## Transferência de Arquivos :recycle:
+# Transferência de Arquivos :recycle:
 
 Existem dois principais modos de transferir arquivos no Linux, com os comandos `cp` e `rsync`
 
-### cp
+## cp
 
     cp -r /caminho/origem /caminho/destino
 
@@ -18,7 +18,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - - -
 
-### rsync
+## rsync
 
     rsync -av /caminho/origem /caminho/destino
 
