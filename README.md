@@ -39,8 +39,6 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - `-P`: Uma forma abreviada que combina `--progress` e `--partial`. O `--partial` preserva arquivos parcialmente transferidos caso a transferência seja interrompida, permitindo retomar do ponto em que parou.
 
-- - -
-
     rsync -av --info=progress2 /caminho/origem /caminho/destino
 
 - `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
