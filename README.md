@@ -34,7 +34,7 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
   - Preservação de grupos (-g)
 
-  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)  
+  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D) <br>
   
   > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
 
@@ -48,4 +48,5 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
 
 - `--info=progress2`: Mostra o progresso total da transferência, incluindo o percentual concluído e a velocidade de transferência. Essa opção é mais clara para ver o progresso geral.
 
-## Firewall :recycle:
+> [!WARNING]
+> Conteúdo ainda em produção, novas atualizações em breve...
