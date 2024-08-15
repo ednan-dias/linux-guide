@@ -29,8 +29,8 @@ Existem dois principais modos de transferir arquivos no Linux, com os comandos `
   - Preservação de permissões (-p)
   - Preservação de timestamps (-t)
   - Preservação de grupos (-g)
-  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)
-
+  - Preservação de propriedades especiais, como dispositivos e arquivos especiais (-D)  
+  
   > Em resumo, o modo -a faz uma cópia "completa" de tudo o que está dentro do diretório de origem, mantendo as características originais dos arquivos e diretórios.
 
 - `-v` (ou `--verbose`): Habilita a "verbosidade", ou seja, faz com que o rsync mostre informações detalhadas sobre os arquivos que estão sendo copiados. Isso é útil para acompanhar o progresso e ver o que está sendo transferido.
